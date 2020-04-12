@@ -170,3 +170,84 @@ int badBinaryInsertionSort() {
   }
   return testSort(array, size, binaryInsertionSort);
 }
+
+int goodShellInsertionSort() {
+  std::cout << "Good shellSort Test\n//\n";
+  int size = 20;
+  int array[size];
+  for (int i = 0; i < size; ++i) {
+    array[i] = size - 1 - i;
+  }
+  return testSort(array, size, shellSort);
+}
+int randomShellInsertionSort() {
+  std::cout << "Random shellSort Test\n//\n";
+  int size = 20;
+  int array[size];
+  for (int i = 0; i < size; ++i) {
+    array[i] = rand() % 100;
+  }
+  return testSort(array, size, shellSort);
+}
+int badShellInsertionSort() {
+  std::cout << "Bad shellSort Test\n//\n";
+  int size = 20;
+  int array[] = {738, 57, 616, 790, 640, 679, 335, 6, 972, 98, 95, 319, 454, 223, 289, 760, 905, 126, 123, 506 };
+  for (int i = 0; i < size / 4; ++i) {
+  }
+  return testSort(array, size, shellSort);
+}
+
+int goodHibbardInsertionSort() {
+  std::cout << "Good hibbardSort Test\n//\n";
+  int size = 20;
+  int array[size];
+  for (int i = 0; i < size; ++i) {
+    array[i] = size - 1 - i;
+  }
+  return testSort(array, size, hibSort);
+}
+int randomHibbardInsertionSort() {
+  std::cout << "Random hibbardSort Test\n//\n";
+  int size = 20;
+  int array[size];
+  for (int i = 0; i < size; ++i) {
+    array[i] = rand() % 100;
+  }
+  return testSort(array, size, hibSort);
+}
+int badHibbardInsertionSort() {
+  std::cout << "Bad hibbardSort Test\n//\n";
+  int size = 20;
+  int array[] = {738, 57, 616, 790, 640, 679, 335, 6, 972, 98, 95, 319, 454, 223, 289, 760, 905, 126, 123, 506 };
+  for (int i = 0; i < size / 4; ++i) {
+  }
+  return testSort(array, size, hibSort);
+}
+
+int goodSedgewickInsertionSort() {
+  std::cout << "Good sedgewickSort Test\n//\n";
+  int size = 20;
+  int array[size];
+  for (int i = 0; i < size; ++i) {
+    array[i] = size - 1 - i;
+  }
+  return testSort(array, size, sedSort);
+}
+int randomSedgewickInsertionSort() {
+  std::cout << "Random sedgewickSort Test\n//\n";
+  int size = 20;
+  int array[size];
+  for (int i = 0; i < size; ++i) {
+    array[i] = rand() % 100;
+  }
+  return testSort(array, size, sedSort);
+}
+int badSedgewickInsertionSort() {
+  std::cout << "Bad sedgewickSort Test\n//\n";
+  int size = 20;
+  int array[] = {738, 57, 616, 790, 640, 679, 335, 6, 972, 98, 95, 319, 454, 223, 289, 760, 905, 126, 123, 506 };
+  for (int i = 0; i < size / 4; ++i) {
+  }
+  return testSort(array, size, sedSort);
+}

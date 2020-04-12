@@ -5,7 +5,7 @@
 
 int main() {
   int counterPassedTest = 0;
-  int countOfTests = 12;
+  int countOfTests = 21;
   counterPassedTest += goodCounterSort();
   counterPassedTest += randomCounterSort();
   counterPassedTest += badCounterSort();
@@ -22,6 +22,17 @@ int main() {
   counterPassedTest += randomBinaryInsertionSort();
   counterPassedTest += badBinaryInsertionSort();
 
+  counterPassedTest += goodShellInsertionSort();
+  counterPassedTest += randomShellInsertionSort();
+  counterPassedTest += badShellInsertionSort();
+
+  counterPassedTest += goodHibbardInsertionSort();
+  counterPassedTest += randomHibbardInsertionSort();
+  counterPassedTest += badHibbardInsertionSort();
+
+  counterPassedTest += goodSedgewickInsertionSort();
+  counterPassedTest += randomSedgewickInsertionSort();
+  counterPassedTest += badSedgewickInsertionSort();
 
 
 

@@ -14,20 +14,24 @@ public:
   List() : tail_(nullptr), head_(nullptr) {
   }
 
-  void operator+=(T value) {
+  int operator+=(T value) {
+    int counter = 0;
     if (head_ == nullptr) {
       head_ = new Elem(value, nullptr);
       tail_ = head_;
-      return;
+      return 1;
     }
     Elem *curr = head_;
     if (head_->getValue() > value) {
       head_ = new Elem(value, curr);
+      return 1;
     } else if (tail_->getValue() < value) {
       tail_->setNext(new Elem(value, nullptr));
       tail_ = tail_->getNext();
+      return 1;
     } else {
       while (curr != nullptr) {
+        counter++;
         if (curr->getValue() >= value) {
           T tmpValue = curr->getValue();
           Elem *tmpPointer = curr->getNext();
@@ -36,7 +40,7 @@ public:
           if (curr == tail_) {
             tail_ = curr->getNext();
           }
-          return;
+          return counter;
         }
         curr = curr->getNext();
       }

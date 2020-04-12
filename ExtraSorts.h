@@ -6,6 +6,8 @@
 #define SORTSTYPES_EXTRASORTS_H
 
 void binaryInsertionSort(int * array, int size);
-
+void shellSort(int * array, int size);
+void hibSort(int * array, int size);
+void sedSort(int * array, int size);
 
 #endif //SORTSTYPES_EXTRASORTS_H
