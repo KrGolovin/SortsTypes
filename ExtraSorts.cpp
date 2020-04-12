@@ -10,7 +10,7 @@ int binSearch(int * array, int value,  int begin, int end) {
   }
 
   int mid = (begin + end) / 2;
-  
+
 
 }
 

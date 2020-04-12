@@ -133,5 +133,6 @@ void bucketSort(double * array, int size) {
       counter++;
     }
   }
+  delete[] b;
 }
 
