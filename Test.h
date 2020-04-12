@@ -15,4 +15,8 @@ int badRadixSort();
 int goodBucketSort();
 int randomBucketSort();
 int badBucketSort();
+
+int goodBinaryInsertionSort();
+int randomBinaryInsertionSort();
+int badBinaryInsertionSort();
 #endif //SORTSTYPES_TEST_H

@@ -5,7 +5,7 @@
 
 int main() {
   int counterPassedTest = 0;
-  int countOfTests = 9;
+  int countOfTests = 12;
   counterPassedTest += goodCounterSort();
   counterPassedTest += randomCounterSort();
   counterPassedTest += badCounterSort();
@@ -17,6 +17,11 @@ int main() {
   counterPassedTest += goodBucketSort();
   counterPassedTest += randomBucketSort();
   counterPassedTest += badBucketSort();
+
+  counterPassedTest += goodBinaryInsertionSort();
+  counterPassedTest += randomBinaryInsertionSort();
+  counterPassedTest += badBinaryInsertionSort();
+
 
 
 

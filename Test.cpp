@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include "BasicSorts.h"
+#include "ExtraSorts.h"
 template <class T>
 bool testFunction(T *array, int size) {
   if (size <= 0) {
@@ -139,4 +140,33 @@ int badBucketSort() {
     array[i] = (rand() % 10) * 0.01;
   }
   return testSort(array, size, bucketSort);
+}
+
+int goodBinaryInsertionSort() {
+  std::cout << "Good BinaryInsertionSort Test\n//\n";
+  int size = 20;
+  int array[size];
+  for (int i = 0; i < size / 2; ++i) {
+    array[2 * i] = 2 * i + 1;
+    array[2 * i + 1] = 2 * i;
+  }
+  return testSort(array, size, binaryInsertionSort);
+}
+int randomBinaryInsertionSort() {
+  std::cout << "Random BinaryInsertionSort Test\n//\n";
+  int size = 20;
+  int array[size];
+  for (int i = 0; i < size; ++i) {
+    array[i] = rand() % 1000;
+  }
+  return testSort(array, size, binaryInsertionSort);
+}
+int badBinaryInsertionSort() {
+  std::cout << "Bad BinaryInsertionSort Test\n//\n";
+  int size = 20;
+  int array[size];
+  for (int i = 0; i < size; ++i) {
+    array[i] = size - 1 -  i;
+  }
+  return testSort(array, size, binaryInsertionSort);
 }

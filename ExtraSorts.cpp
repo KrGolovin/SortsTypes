@@ -6,11 +6,18 @@
 #include <algorithm>
 int binSearch(int * array, int value,  int begin, int end) {
   if (begin == end) {
+    if (value > array[begin]) {
+      return begin + 1;
+    }
     return begin;
   }
 
   int mid = (begin + end) / 2;
-
+  if (array[mid] > value) {
+    return binSearch(array, value, begin, mid);
+  } else {
+    return binSearch(array, value, mid + 1, end);
+  }
 
 }
 
